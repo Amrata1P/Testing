@@ -1,0 +1,84 @@
+package Assigments.practiceproject;
+import java.io.*;
+public class appendStrToFile {
+
+		    public static void appendStrToFile(String fileName,String str)
+		    {
+		        // Try block to check for exceptions
+		        try {
+		 
+		           
+		            BufferedWriter out = new BufferedWriter(
+		            		 new FileWriter(fileName, true));
+		            
+		            //write
+		            out.write(str);
+		            // Close the connection
+		            out.close();
+		        }
+		 
+		        // Catch block to handle the exceptions
+		        catch (IOException e) {
+		 
+		            // Display message when exception 
+		            System.out.println("exception occurred" + e);
+		        }
+		    }
+		 
+		    // Method 2
+		    // main driver method
+		    public static void main(String[] args) throws Exception
+		    {
+		        // Creating a sample file with some random text
+		        String fileName = "my.txt";
+		 
+		        // Try block to check for exceptions
+		        try {
+		 
+		           
+		            BufferedWriter out = new BufferedWriter(
+		                new FileWriter(fileName));
+		 
+		            // Writing on. file
+		            out.write("Hello Guys:\n");
+		 
+		            // Closing file connections
+		            out.close();
+		        }
+		 
+		        // Catch block to handle exceptions
+		        catch (IOException e) {
+		 
+		            // Display message when error occurs
+		            System.out.println("Exception Occurred" + e);
+		        }
+		 
+		        
+		        // created file
+		        String str = "This is MyProgram";
+		 
+		        // Calling the above method
+		        appendStrToFile(fileName, str);
+		 
+		        // Let us print modified file
+		        try {
+		            BufferedReader in = new BufferedReader(
+		                new FileReader("my.txt"));
+		 
+		            String mystring;
+		 
+		            
+		            // condition holds true
+		            while ((mystring = in.readLine()) != null) {
+		                System.out.println(mystring);
+		            }
+		        }
+		 
+		        // Catch block to handle IO exceptions
+		        catch (IOException e) {
+		            System.out.println("Exception Occurred" + e);
+		        }
+		    }
+		
+
+}
