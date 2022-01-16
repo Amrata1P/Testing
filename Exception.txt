@@ -1,0 +1,21 @@
+package Assigments.practiceproject;
+
+public class ExceptionDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+try
+{  
+	int l = 7;
+	int m = 2;
+	int n = l/m;
+	System.out.println("Output is" +n);
+}
+	
+ catch(Exception e)
+{
+	System.out.println("error ");
+ }
+System.out.println("Bye");
+	}
+}
