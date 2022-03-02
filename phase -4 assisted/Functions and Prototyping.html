@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Functions and Prototyping Demo
+ </h1>
+ <script>
+     
+class Employee{
+    
+ constructor(name, designation, yearOfBirth)
+ {   
+    this.name= name; 
+    this.designation= designation; 
+    this.yearOfBirth= yearOfBirth; 
+} 
+display()
+{
+                 console.log("name: "+this.name);
+                 console.log("designation: "+this.designation);
+                 console.log("yearOfBirth : "+this.yearOfBirth);
+}
+Details()
+{
+                 console.log("EmployeDetailss: "+this.name+" "+this.designation+" "+this.yearOfBirth);
+             }
+
+            }
+// creating calculateAge() method to the Prototype property 
+Employee.prototype.calculateAge= function(){  
+    console.log('The current age is: '+(2019- this.yearOfBirth)); 
+} 
+console.log(Employee.prototype); 
+  
+
+// creating Objects
+let Emp1= new Employee('kabir', 'Junior HR', 1995);  
+console.log(Emp1) ;
+Emp1.Details();
+Emp1.calculateAge(); 
+
+let Emp2= new Employee('sujata', 'Junior Tester', 1990); 
+console.log(Emp2) 
+Emp2.Details();
+Emp2.calculateAge();
+
+let Emp3= new Employee('Akhilesh', 'Senior Software Developer', 1998); 
+console.log(Emp3) 
+Emp3.Details();
+Emp3.calculateAge();
+
+ </script>
+</body>
+</html>
